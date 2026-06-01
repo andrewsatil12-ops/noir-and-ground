@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noir & Ground | The Ritual</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <header class="header fade-in">
+    <div class="container flex-between">
+      <div class="logo">Noir & Ground</div>
+      <nav class="nav">
+        <a href="#menu">Menu</a>
+        <a href="#story">Story</a>
+        <a href="#environment">Environment</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content fade-in">
+      <span class="label">Artisanal Roasting</span>
+      <h1>Where coffee becomes <i>ritual.</i></h1>
+      <a href="#menu" class="btn">Reserve your visit</a>
+    </div>
+  </section>
+
+  <div class="marquee-wrapper fade-in">
+    <div class="marquee-content">
+      <span>SPECIALTY COFFEE</span><span>•</span>
+      <span>ARTISANAL ROASTING</span><span>•</span>
+      <span>MELBOURNE</span><span>•</span>
+      <span>THE SLOW RITUAL</span><span>•</span>
+      <span>SPECIALTY COFFEE</span><span>•</span>
+      <span>ARTISANAL ROASTING</span><span>•</span>
+      <span>MELBOURNE</span><span>•</span>
+      <span>THE SLOW RITUAL</span><span>•</span>
+    </div>
+  </div>
+
+  <!-- Story Section -->
+  <section id="story" class="story-video-bg">
+    <div class="video-container">
+      <video id="bg-video-1" src="videos/extraction_1.webm" class="bg-video active" muted playsinline></video>
+      <video id="bg-video-2" src="videos/extraction_2.webm" class="bg-video" muted playsinline></video>
+      <div class="video-overlay"></div>
+    </div>
+    <div class="container relative-z">
+      <div class="story-content fade-in">
+        <h2>The slow extraction.</h2>
+        <p>Noir & Ground doesn't sell coffee.<br>It sells permission to slow down.</p>
+        <p>We source only microlot beans, roasted with mathematical precision to reveal notes typically lost in commercial processes.</p>
+        <p>Every cup is a quiet act of intention.<br>Born in Melbourne. Served without compromise.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="environment" class="slider-section">
+    <div class="slider-header fade-in">
+      <h2>The Atmosphere</h2>
+      <p>A space designed for those who believe the setting is part of the taste.</p>
+    </div>
+    
+    <div class="slider-container fade-in">
+      <div class="slider-track" id="env-slider">
+        <div class="slide">
+          <img src="images/slider_3.jpg" alt="Premium Environment" class="lightbox-trigger">
+        </div>
+        <div class="slide">
+          <img src="images/slider_1.jpg" alt="Another Angle" class="lightbox-trigger">
+        </div>
+        <div class="slide">
+          <img src="images/slider_2.jpg" alt="Perspective" class="lightbox-trigger">
+        </div>
+        <div class="slide">
+          <img src="images/slider_4.jpg" alt="Second Floor" class="lightbox-trigger">
+        </div>
+      </div>
+      
+      <div class="slider-progress-wrapper">
+        <div class="slider-progress-bar" id="slider-progress"></div>
+      </div>
+      
+      <div class="drag-hint">
+        <span>DRAG TO EXPLORE</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="drinks" class="drinks-section">
+    <div class="marquee-wrapper fade-in">
+      <div class="marquee-content">
+        <span>CURATED BEVERAGES</span><span>•</span>
+        <span>THE MENU</span><span>•</span>
+        <span>CRAFTED DRINKS</span><span>•</span>
+        <span>CURATED BEVERAGES</span><span>•</span>
+        <span>THE MENU</span><span>•</span>
+        <span>CRAFTED DRINKS</span><span>•</span>
+        <span>CURATED BEVERAGES</span><span>•</span>
+        <span>THE MENU</span><span>•</span>
+        <span>CRAFTED DRINKS</span><span>•</span>
+      </div>
+    </div>
+    
+    <div class="drinks-grid">
+        <div class="drink-item fade-in">
+          <div class="drink-image">
+            <img src="images/bebidas/capuccino.jpeg" alt="Cappuccino" class="lightbox-trigger">
+          </div>
+          <div class="drink-info">
+            <h3>Cappuccino</h3>
+            <p>Perfectly textured milk, rich espresso, balanced harmony.</p>
+            <a href="#" class="drink-btn">Discover more &rarr;</a>
+          </div>
+        </div>
+        <div class="drink-item fade-in" style="transition-delay: 100ms;">
+          <div class="drink-image">
+            <img src="images/bebidas/coador.jpeg" alt="Pour Over" class="lightbox-trigger">
+          </div>
+          <div class="drink-info">
+            <h3>Pour Over</h3>
+            <p>Slow extraction. Single origin nuances, fully revealed.</p>
+            <a href="#" class="drink-btn">Discover more &rarr;</a>
+          </div>
+        </div>
+        <div class="drink-item fade-in" style="transition-delay: 200ms;">
+          <div class="drink-image">
+            <img src="images/bebidas/matcha green.jpg" alt="Matcha" class="lightbox-trigger">
+          </div>
+          <div class="drink-info">
+            <h3>Ceremonial Matcha</h3>
+            <p>Vibrant, earthy &mdash; whisked to perfection.</p>
+            <a href="#" class="drink-btn">Discover more &rarr;</a>
+          </div>
+        </div>
+        <div class="drink-item fade-in" style="transition-delay: 300ms;">
+          <div class="drink-image">
+            <img src="images/bebidas/moccha.jpeg" alt="Mocha" class="lightbox-trigger">
+          </div>
+          <div class="drink-info">
+            <h3>Artisanal Mocha</h3>
+            <p>Espresso, steamed milk, and rich dark cocoa. Nothing more needed.</p>
+            <a href="#" class="drink-btn">Discover more &rarr;</a>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <div class="lightbox-nav lightbox-prev">&#10094;</div>
+    <div class="lightbox-nav lightbox-next">&#10095;</div>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <section id="collection" class="collection fade-in">
+    <div class="container">
+      <div class="collection-header">
+        <h2>The Collection</h2>
+        <p>Single origin beans, selected for those who notice the difference.</p>
+      </div>
+      <div class="collection-grid">
+        <div class="product-card-new">
+          <div class="product-image-wrapper">
+            <span class="badge-new">NEW ARRIVAL</span>
+            <img src="images/product_bourbon.png" alt="Bourbon Amarelo">
+          </div>
+          <div class="product-info">
+            <p class="notes">Yellow Bourbon &middot; Chocolate &middot; Hazelnut</p>
+            <h3>Bourbon Amarelo</h3>
+            <p class="price">$22.00</p>
+            <a href="#" class="btn-add">ADD TO CART</a>
+          </div>
+        </div>
+        <div class="product-card-new">
+          <div class="product-image-wrapper">
+            <span class="badge-new">ALL TIME FAVORITE</span>
+            <img src="images/product_geisha.png" alt="Geisha Washed">
+          </div>
+          <div class="product-info">
+            <p class="notes">Jasmine &middot; Bergamot &middot; Honey</p>
+            <h3>Geisha Washed</h3>
+            <p class="price">$35.00</p>
+            <a href="#" class="btn-add">ADD TO CART</a>
+          </div>
+        </div>
+        <div class="product-card-new">
+          <div class="product-image-wrapper">
+            <span class="badge-new">MENU DEBUT</span>
+            <img src="images/product_yirgacheffe.png" alt="Yirgacheffe">
+          </div>
+          <div class="product-info">
+            <p class="notes">Blueberry &middot; Floral &middot; Lemongrass</p>
+            <h3>Yirgacheffe</h3>
+            <p class="price">$28.00</p>
+            <a href="#" class="btn-add">ADD TO CART</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <h2>Noir & Ground</h2>
+      <p>Noir & Ground &copy; 2026<br>Melbourne, AU &middot; Crafted with intention. Served without compromise.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
